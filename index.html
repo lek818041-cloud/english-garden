@@ -16,21 +16,21 @@
     </a>
     <nav class="main-nav" aria-label="Điều hướng chính">
       <a class="nav-link active" href="#home">Trang chủ</a>
-      <a class="nav-link" href="#lessons">Bài học</a>
-      <a class="nav-link" href="#practice">Luyện tập</a>
+      <a class="nav-link" href="#section/vocabulary">Học từ vựng</a>
+      <a class="nav-link" href="#section/grammar">Ngữ pháp</a>
     </nav>
-    <a class="header-cta" href="#lessons">Bắt đầu học <span aria-hidden="true">↗</span></a>
+    <a class="header-cta" href="#section/translation">Tập dịch <span aria-hidden="true">↗</span></a>
   </header>
 
   <main id="home">
-    <section class="hero page-shell" aria-labelledby="hero-title">
+    <section class="hero page-shell home-section" aria-labelledby="hero-title">
       <div class="hero-copy">
         <p class="eyebrow"><span class="eyebrow-dot"></span> MỖI NGÀY MỘT CHÚT, TIẾN BỘ MỖI NGÀY</p>
         <h1 id="hero-title">Tiếng Anh tốt hơn,<br><span>bắt đầu từ hôm nay.</span></h1>
         <p class="hero-description">Những bài học ngắn, vui và vừa sức giúp bạn tự tin dùng tiếng Anh trong cuộc sống hằng ngày.</p>
         <div class="hero-actions">
-          <a class="button button-primary" href="#lessons">Khám phá bài học <span aria-hidden="true">→</span></a>
-          <a class="text-link" href="#practice">Thử bài tập <span aria-hidden="true">↗</span></a>
+          <a class="button button-primary" href="#section/vocabulary">Khám phá bài học <span aria-hidden="true">→</span></a>
+          <a class="text-link" href="#section/translation">Thử dịch câu <span aria-hidden="true">↗</span></a>
         </div>
         <div class="hero-note"><span class="avatar-stack" aria-hidden="true"><i>A</i><i>M</i><i>L</i></span><span>Học theo nhịp độ của riêng bạn</span></div>
       </div>
@@ -45,66 +45,67 @@
       </div>
     </section>
 
-    <section class="stats-strip page-shell" aria-label="Tổng quan học tập">
+    <section class="section page-shell home-section" id="learning-paths" aria-labelledby="paths-title">
+      <div class="section-heading">
+        <div><p class="eyebrow">CHỌN CÁCH BẠN MUỐN HỌC</p><h2 id="paths-title">Hành trình của <span>bạn</span></h2><p class="section-description">Mỗi mục có bài học và bài luyện tập riêng.</p></div>
+      </div>
+      <div class="path-grid">
+        <a class="path-card path-vocabulary" href="#section/vocabulary"><span class="path-icon" aria-hidden="true">Aa</span><span class="path-label">NHÁNH 01</span><h3>Học từ vựng</h3><p>Ghi nhớ từ mới qua chủ đề quen thuộc, cách đọc và ví dụ.</p><span class="path-link">Xem bài học <span aria-hidden="true">→</span></span></a>
+        <a class="path-card path-grammar" href="#section/grammar"><span class="path-icon" aria-hidden="true">✎</span><span class="path-label">NHÁNH 02</span><h3>Rèn ngữ pháp</h3><p>Học cấu trúc câu và luyện cách dùng ngữ pháp cơ bản.</p><span class="path-link">Xem bài học <span aria-hidden="true">→</span></span></a>
+        <a class="path-card path-translation" href="#section/translation"><span class="path-icon" aria-hidden="true">⇄</span><span class="path-label">NHÁNH 03</span><h3>Tập dịch</h3><p>Thực hành dịch câu ngắn từ tiếng Việt sang tiếng Anh.</p><span class="path-link">Luyện dịch <span aria-hidden="true">→</span></span></a>
+      </div>
+    </section>
+
+    <section class="stats-strip page-shell home-section" aria-label="Tổng quan học tập">
       <div class="welcome-note"><span class="wave" aria-hidden="true">✳</span><span><strong>Chào bạn, người mới!</strong><small>Cùng gieo một hạt mầm tiếng Anh nhé.</small></span></div>
       <div class="stat-item"><span class="stat-icon stat-icon-green" aria-hidden="true">✓</span><span><strong id="completed-count">0</strong><small>bài đã hoàn thành</small></span></div>
       <div class="stat-item"><span class="stat-icon stat-icon-peach" aria-hidden="true">◎</span><span><strong id="progress-label">0%</strong><small>mục tiêu tuần này</small></span></div>
       <div class="progress-track" role="progressbar" aria-label="Tiến độ bài học" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span id="progress-fill"></span></div>
     </section>
 
-    <section class="section page-shell" id="lessons" aria-labelledby="lessons-title">
+    <section class="section page-shell learning-section" id="lessons" aria-labelledby="lessons-title" hidden>
+      <a class="text-link detail-back" href="#home"><span aria-hidden="true">←</span> Về trang chủ</a>
       <div class="section-heading">
-        <div><p class="eyebrow">LỘ TRÌNH DÀNH CHO BẠN</p><h2 id="lessons-title">Bắt đầu với điều <span>gần gũi</span></h2><p class="section-description">Chọn một chủ đề bạn thích. Mỗi bài chỉ mất khoảng 5 phút.</p></div>
-        <a class="text-link section-more" href="#practice">Đến phần luyện tập <span aria-hidden="true">→</span></a>
+        <div><p class="eyebrow" id="branch-eyebrow"></p><h2 id="lessons-title"></h2><p class="section-description" id="branch-description"></p></div>
       </div>
       <div class="lesson-tools">
         <label class="search-box"><span aria-hidden="true">⌕</span><span class="sr-only">Tìm bài học</span><input id="lesson-search" type="search" placeholder="Tìm một chủ đề..." autocomplete="off"></label>
-        <div class="filter-group" role="group" aria-label="Lọc bài học">
-          <button class="filter-button selected" type="button" data-filter="all" aria-pressed="true">Tất cả</button>
-          <button class="filter-button" type="button" data-filter="Từ vựng" aria-pressed="false">Từ vựng</button>
-          <button class="filter-button" type="button" data-filter="Giao tiếp" aria-pressed="false">Giao tiếp</button>
-          <button class="filter-button" type="button" data-filter="Ngữ pháp" aria-pressed="false">Ngữ pháp</button>
-        </div>
       </div>
       <div class="lesson-grid" id="lesson-grid" aria-live="polite"></div>
       <p class="empty-state" id="empty-state" hidden>Chưa tìm thấy bài học phù hợp. Thử một từ khóa khác nhé.</p>
     </section>
 
-    <section class="practice-section" id="practice" aria-labelledby="practice-title">
-      <div class="page-shell practice-layout">
-        <div class="practice-intro">
-          <p class="eyebrow">HỌC QUA THỰC HÀNH</p>
-          <h2 id="practice-title">Một từ mới,<br><span>một bước tự tin.</span></h2>
-          <p>Đọc từ, nghe cách phát âm rồi thử trả lời câu hỏi ngắn bên cạnh nhé.</p>
-          <div class="today-label"><span class="today-dot"></span> TỪ VỰNG HÔM NAY</div>
-        </div>
-        <article class="flashcard" aria-label="Thẻ từ vựng hôm nay">
-          <div class="flashcard-top"><span class="card-label">TỪ VỰNG · CƠ BẢN</span><span class="card-decoration" aria-hidden="true">✳</span></div>
-          <div class="word-visual" aria-hidden="true"><span>g</span><i></i><i></i><i></i></div>
-          <p class="flash-word" id="flash-word">grow</p>
-          <p class="pronunciation" id="flash-pronunciation">/ɡrəʊ/</p>
-          <p class="translation" id="flash-translation">phát triển · lớn lên</p>
-          <div class="flashcard-actions"><button class="button button-outline" id="speak-button" type="button" aria-label="Nghe phát âm">◖))) Nghe phát âm</button><button class="next-word" id="next-word" type="button">Từ tiếp theo <span aria-hidden="true">→</span></button></div>
-          <p class="speech-status" id="speech-status" role="status" aria-live="polite"></p>
-        </article>
-        <form class="quiz-card" id="quiz-form">
-          <div class="quiz-heading"><span class="quiz-number">01</span><span class="quiz-type">CHỌN ĐÁP ÁN ĐÚNG</span></div>
-          <h3>“I water my plants so they can <span>___</span>.”</h3>
-          <p class="quiz-hint">Tôi tưới cây để chúng có thể lớn lên.</p>
-          <fieldset class="answer-list">
-            <legend class="sr-only">Chọn từ thích hợp để hoàn thành câu</legend>
-            <label class="answer-option"><input type="radio" name="answer" value="sleep"><span class="answer-letter">A</span><span>sleep</span></label>
-            <label class="answer-option"><input type="radio" name="answer" value="grow"><span class="answer-letter">B</span><span>grow</span></label>
-            <label class="answer-option"><input type="radio" name="answer" value="drink"><span class="answer-letter">C</span><span>drink</span></label>
-          </fieldset>
-          <div class="quiz-footer"><p class="quiz-feedback" id="quiz-feedback" role="status" aria-live="polite"></p><button class="button button-primary quiz-submit" type="submit">Kiểm tra <span aria-hidden="true">→</span></button></div>
-        </form>
+    <section class="lesson-detail page-shell" id="lesson-detail" aria-labelledby="detail-title" hidden>
+      <a class="text-link detail-back" id="detail-back" href="#home"><span aria-hidden="true">←</span> Quay lại danh sách</a>
+      <div class="detail-heading">
+        <p class="eyebrow" id="detail-category"></p>
+        <h1 id="detail-title"></h1>
+        <p class="detail-description" id="detail-description"></p>
       </div>
+      <section class="detail-words" aria-labelledby="detail-words-title">
+        <div class="detail-section-heading"><div><p class="eyebrow">TỪ VỰNG CỦA BÀI</p><h2 id="detail-words-title">Học từ mới</h2></div><span class="detail-word-count" id="detail-word-count"></span></div>
+        <div class="detail-word-grid" id="detail-word-grid"></div>
+      </section>
+      <section class="grammar-explanation" id="grammar-explanation" hidden aria-labelledby="grammar-title">
+        <p class="eyebrow">GHI NHỚ CẤU TRÚC</p><h2 id="grammar-title"></h2><p id="grammar-rule"></p><div class="grammar-example" id="grammar-example"></div>
+      </section>
+      <form class="detail-quiz" id="detail-quiz">
+        <div class="quiz-heading"><span class="quiz-number" id="exercise-number">01 / 03</span><span class="quiz-type" id="exercise-type">ÔN TẬP TỪ VỰNG</span></div>
+        <h2 id="detail-question"></h2>
+        <fieldset class="answer-list" id="detail-answer-list">
+          <legend class="sr-only">Chọn từ tiếng Anh đúng</legend>
+        </fieldset>
+        <label class="sr-only" for="exercise-text-answer">Câu trả lời</label>
+        <input class="translation-input" id="exercise-text-answer" type="text" autocomplete="off" placeholder="Nhập câu trả lời..." hidden>
+        <div class="quiz-footer"><p class="quiz-feedback" id="detail-feedback" role="status" aria-live="polite"></p><button class="button button-primary quiz-submit" id="exercise-submit" type="submit">Kiểm tra <span aria-hidden="true">→</span></button></div>
+      </form>
+      <p class="translation-hint" id="exercise-hint"></p>
+      <div class="detail-completion"><p id="detail-completion-status" role="status" aria-live="polite"></p><button class="button button-dark" id="complete-lesson" type="button">Đánh dấu hoàn thành <span aria-hidden="true">✓</span></button></div>
     </section>
 
-    <section class="bottom-cta page-shell">
+    <section class="bottom-cta page-shell home-section">
       <div><span class="cta-flower" aria-hidden="true">✿</span><span><strong>Mỗi ngày 5 phút cũng tạo nên khác biệt.</strong><small>Chọn bài học đầu tiên và bắt đầu hành trình của bạn.</small></span></div>
-      <a class="button button-dark" href="#lessons">Chọn bài học <span aria-hidden="true">→</span></a>
+      <a class="button button-dark" href="#learning-paths">Chọn bài học <span aria-hidden="true">→</span></a>
     </section>
   </main>
 
